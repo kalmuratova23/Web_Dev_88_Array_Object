@@ -172,7 +172,7 @@ for (let item of arrObj){
     console.log(item.name, item.salary)
 }
 
-console.log('-----------------for')
+console.log('-----------------here just: for')
 for(let i = 0; i<arrObj.length; i++){
     console.log(arrObj[i].name, arrObj[i].salary)
 }

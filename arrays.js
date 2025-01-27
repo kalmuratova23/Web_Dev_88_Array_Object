@@ -29,16 +29,16 @@
 // console.log(sum)
 
 
-let imgs = ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDZT0qh99IVOiZ1NdoCsrP4_mSQzuAFRBVzw&s', 
-             'https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg', 
-             'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtnvAOajH9gS4C30cRF7rD_voaTAKly2Ntaw&s']
+// let imgs = ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDZT0qh99IVOiZ1NdoCsrP4_mSQzuAFRBVzw&s', 
+//              'https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg', 
+//              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtnvAOajH9gS4C30cRF7rD_voaTAKly2Ntaw&s']
 
-let output =''
-for(let item of imgs){
-     output += `<img src = ${item} width = '200px' height = '200px'/>`
-    // output += "<img src =  " + item + " width = '200px' height = '200px'/>"
-}
-document.write(output)
+// let output =''
+// for(let item of imgs){
+//      output += `<img src = ${item} width = '200px' height = '200px'/>`
+//     // output += "<img src =  " + item + " width = '200px' height = '200px'/>"
+// }
+// document.write(output)
 // console.log(output)
 
 //.push - добавление элемента в конец массива, динамический массив
@@ -180,8 +180,56 @@ for(let i = 0; i<arrObj.length; i++){
 
 //task-6. вывести сумму всех зарплат
 
-let sum = 0
-for (let item of arrObj){
-    sum += Number(item.salary)
+// let sum = 0
+// for (let item of arrObj){
+//     sum += Number(item.salary)
+// }
+// console.log(sum)
+
+//task-7. Вывести среднюю зарплату
+// let sum = 0
+// for (let item of arrObj){
+//     sum += item.salary
+// }
+// let avg = sum / arrObj.length
+
+// for(let item of arrObj){
+//     if(item.salary > avg){
+//         console.log (item)
+//     }
+// }
+// console.log(avg)
+
+//task-8 Вывести на сайте целые блоки, и сделать так картинка и снизу описание
+let content = [
+    {
+        imgSrc: 'https://static.vecteezy.com/system/resources/thumbnails/001/840/612/small_2x/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-free-vector.jpg',
+        imgTitle: 'Profile 1'
+    },
+    {
+        imgSrc: 'https://images.unsplash.com/photo-1628563694622-5a76957fd09c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW5zdGFncmFtJTIwcHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D',
+        imgTitle: 'Profile 2'
+    }
+    ,
+    {
+        imgSrc: 'https://static.vecteezy.com/system/resources/thumbnails/001/840/612/small_2x/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-free-vector.jpg',
+        imgTitle: 'Profile 3'
+    }
+    ,
+    {
+        imgSrc: 'https://static.vecteezy.com/system/resources/thumbnails/005/544/718/small_2x/profile-icon-design-free-vector.jpg',
+        imgTitle: 'Profile 4'
+    },
+]
+
+
+let output = '<div class = "wrap>'
+for(let item of content) {
+    output +=  `
+        <div class = "profile-item">
+        <img src = "${item.imgSrc}"
+        <h3>${item.imgTitle}</h3>
+        </div>`
 }
-console.log(sum)
+output += '</div>'
+document.write(output)
